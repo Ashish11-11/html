@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Question 10</title>
+ <style>
+  .SignUpbox{
+ width: 360px;
+ height: 500px;
+ margin: auto;
+ background-color:pink;
+ border-radius: 3px;
+ box-shadow: 10cm;
+ }
+ input[type="button"]{
+  width: 320px;
+  height: 35px;
+  margin-top: 10px;
+  border: none;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+input[type="text"],input[type="password"]{
+  border: 4px solid aqua;
+  border-radius: 9px;
+}
+ </style>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+    $(document).ready(function(){
+       $("button").click(function(){
+          alert("Are you sure!!");
+       });
+       
+       $("#password").mouseenter(function(){
+         $("#instructions").slideDown( function(){
+       
+       });
+      });
+      $("#password").mouseleave(function(){
+         $("#instructions").slideUp( function(){
+       });
+      });
+    });
+ </script>
+</head>
+<body>
+          
+         <div class="SignUpbox">
+          <h2 style="text-align: center;">Registration</h2>
+   <div style="text-align:center"><img src="C:\Users\HEMANTH\OneDrive\Pictures\Saved Pictures\SOA-PNG.png" alt="" style="border-radius: 50%; width: 50px; height: 50px;"></div>
+          
+          <form >
+          USERNAME:  <input type="text" id="firstname" placeholder="FirstName" required><br><br>
+          EMAIL: <input type="text" id="Lastname" placeholder="LastName" required><br><br>
+          *Mobile Number  <input type="text" id="Number" placeholder="123-456-7890" required><br><br>
+          
+          GENDER:  <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="Male">Male</label>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="Female">Female</label>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="Other">Other</label><br><br>
+          Password   <input type="password" id="password" required a><br><br>
+          <ul id="instructions">
+            <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+            <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+            <li id="number" class="invalid">At least <strong>one number</strong></li>
+            <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+        </ul><br><br>
+       <input type="button" value="SignUp"  >
+         </form>
+        
+       </body>
+</html>
