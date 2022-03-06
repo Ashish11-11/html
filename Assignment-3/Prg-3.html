@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A-3 Prg-03</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#field1").blur(function() {
+                alert("Input 1 loses focus");
+            });
+            // $("#field2").blur(function() {
+            //     alert("Input 2 loses focus");
+            // });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input id="field1" type="text" value="Field 1">
+        <input id="field2" type="text" value="Field 2">
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A-3 Prg-02</title>
+    <style>
+        p{
+            display: inline;
+            background-color: rebeccapurple;
+            color: white;
+            padding: 8px 10px;
+            /* border-radius: 50%; */
+            cursor: pointer;
+        }
+        div{
+            margin-top: 40px;
+            height: 100px;
+            width: 250px;
+            text-align: center;
+        }
+        #clk{
+            background-color: orangered;
+        }
+        #dblclk{
+            background-color: greenyellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#clk").hide();
+            $("#dblclk").hide();
+            $("p").click(function(){
+             $("#clk").show();
+         });
+         $("p").dblclick(function(){
+            $("#dblclk").show();
+         });
+        });
+    </script>
+</head>
+<body>
+    <p>Click me!</p>
+    <div id="clk">
+        <br>
+        <h4>Clicked!</h4> 
+    </div>
+    <div id="dblclk">
+        <br>
+        <h4>Double-Clicked!!</h4>
+    </div>
+</body>
+</html>
