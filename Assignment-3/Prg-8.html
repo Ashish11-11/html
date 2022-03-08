@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A-3 Prg-08</title>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        .container{
+           margin-left: 30%;
+        }
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+            padding: 5px;
+            color: greenyellow;
+        }
+        table{
+            background-color: darkred;
+        }
+        tr:hover{
+            background-color: black;
+        }
+       input[type=text]
+        {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid tomato;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+            color: crimson;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#search").on("keyup",function(){
+            var value=$(this).val().toLowerCase();
+            $("tr").filter(function(){
+                $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            });
+        });
+      });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search for a job">
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th>NAME</th>
+                <th>JOB</th>
+            </tr>
+            <tr>
+                <td>Jack Mines</td>
+                <td>SDE</td>
+            </tr>
+            <tr>
+                <td>Jill Hather</td>
+                <td>IOS Developer</td>
+            </tr>
+            <tr>
+                <td>Andrew Garfield</td>
+                <td>Data Analytics</td>
+            </tr>
+            <tr>
+                <td>Scarlett John</td>
+                <td>Front-end Developer</td>
+            </tr>
+            <tr>
+                <td>Chris Evans</td>
+                <td>Back-end Developer</td>
+            </tr>
+            <tr>
+                <td>Robert Downey Jr.</td>
+                <td>Full Stack Developer</td>
+            </tr>
+           <tr>
+                <td>Chris Hemsworth</td>
+                <td>Android Developer</td>
+            </tr>
+            <tr>
+                <td>Dr.Sarkar</td>
+                <td>Surgeon</td>
+            </tr>
+            <tr>
+                <td>Hulk</td>
+                <td>Physician</td>
+            </tr>
+            <tr>
+                <td>Animesh Swain</td>
+                <td>Data Scientist</td>
+            </tr>
+            <tr>
+                <td>Lokesh Chauhan</td>
+                <td>Video Game Designer</td>
+            </tr>
+            <tr>
+                <td>Aman Aggarwal</td>
+                <td>Technology Manager</td>
+            </tr>
+            <tr>
+                <td>Peter Parker</td>
+                <td>Database Administrator</td>
+            </tr>
+            <tr>
+                <td>Nebula Woods</td>
+                <td>Network Administrator</td>
+            </tr>
+            <tr>
+                <td>Guinea Sharma</td>
+                <td>IT Security Consultant</td>
+            </tr>
+            <tr>
+                <td>Jane Heathrow</td>
+                <td>Health Information Technician</td>
+            </tr>
+            <tr>
+                <td>Robert Woods</td>
+                <td>Site Reliability Engineer(SRE)</td>
+            </tr>
+            <tr>
+                <td>Shrekk John</td>
+                <td>DevOps Engineer</td>
+            </tr>
+            <tr>
+                <td>Vickey Singh</td>
+                <td>Cybersecurity Engineer</td>
+            </tr>
+            <tr>
+                <td>Himmat Singh</td>
+                <td>Professional Hacker</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
