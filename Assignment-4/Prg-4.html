@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A-4 Prg-04</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script src="https:cdn.plot.ly/plotly-2.8.3.min.js"></script>
+        <style>
+            body{
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h2 style="margin-left: 15%;">Pie Chart</h2>
+	    <div id="div1" ></div>
+        <h2 style="text-align: center;">Bar Chart</h2>
+	    <div id="div2"></div>
+	    <script>
+	    	var data=[
+	    	{
+	    		labels:['Day1','Day2','Day3','Day4','Day5','Day6','Day7'],
+	    		values:[25,21,48,95,53,51,32],
+	    		type:'pie'
+	    	}];
+	    	var layout = {
+	    		height:600,
+	    		width:600
+	    	};
+	    	Plotly.newPlot('div1',data,layout);
+	    </script>
+	    <script>
+	    	var data=[
+	    	{
+	    		x:['Day1','Day2','Day3','Day4','Day5','Day6','Day7'],
+	    		y:[25,21,48,95,53,51,32],
+	    		type:'bar'
+	    	}];
+	    	Plotly.newPlot('div2',data);
+	    </script>
+	
+</body>
+</html>
